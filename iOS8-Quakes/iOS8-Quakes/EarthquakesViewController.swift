@@ -30,6 +30,24 @@ class EarthquakesViewController: UIViewController {
 			
 			if let quakes = quakes {
 				print("Quakes: \(quakes)")
+
+				DispatchQueue.main.async {
+					
+					
+					// Region of interest (ROI)
+					// Rectangular region
+					if let firstQuake = quakes.first {
+						
+						let span = MKCoordinateSpan(latitudeDelta: 2, longitudeDelta: 2)
+						let region = MKCoordinateRegion(center: firstQuake.coordinate, span: span)
+						
+						self.mapView.setRegion(region, animated: true)
+					}
+					
+					self.mapView.addAnnotations(quakes)
+					
+				}
+
 			}
 		}
 
