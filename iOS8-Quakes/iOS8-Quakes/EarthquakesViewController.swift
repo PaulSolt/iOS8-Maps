@@ -76,6 +76,11 @@ extension EarthquakesViewController: MKMapViewDelegate {
 			annotationView.markerTintColor = .yellow
 		}
 		
+		annotationView.canShowCallout = true
+		let detailView = QuakeDetailView(frame: .zero)
+		detailView.quake = quake
+		annotationView.detailCalloutAccessoryView = detailView
+		
 		return annotationView
 	}
 	
