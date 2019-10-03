@@ -13,7 +13,20 @@
 		BD60D3D22346592A00AB824A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD60D3D02346592A00AB824A /* Main.storyboard */; };
 		BD60D3D42346592B00AB824A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD60D3D32346592B00AB824A /* Assets.xcassets */; };
 		BD60D3D72346592B00AB824A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD60D3D52346592B00AB824A /* LaunchScreen.storyboard */; };
+		BD60D3E5234659A400AB824A /* iOS8_QuakesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60D3E4234659A400AB824A /* iOS8_QuakesTests.swift */; };
+		BD60D3ED234659EB00AB824A /* Quake.json in Resources */ = {isa = PBXBuildFile; fileRef = BD60D3EC234659EB00AB824A /* Quake.json */; };
+		BD60D3EF23465A6A00AB824A /* QuakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60D3EE23465A6A00AB824A /* QuakeData.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD60D3E7234659A400AB824A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD60D3BF2346592A00AB824A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD60D3C62346592A00AB824A;
+			remoteInfo = "iOS8-Quakes";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BD60D3C72346592A00AB824A /* iOS8-Quakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS8-Quakes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +37,22 @@
 		BD60D3D32346592B00AB824A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD60D3D62346592B00AB824A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD60D3D82346592B00AB824A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD60D3E2234659A400AB824A /* iOS8-QuakesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS8-QuakesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD60D3E4234659A400AB824A /* iOS8_QuakesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS8_QuakesTests.swift; sourceTree = "<group>"; };
+		BD60D3E6234659A400AB824A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD60D3EC234659EB00AB824A /* Quake.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quake.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		BD60D3EE23465A6A00AB824A /* QuakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BD60D3C42346592A00AB824A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD60D3DF234659A400AB824A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				BD60D3C92346592A00AB824A /* iOS8-Quakes */,
+				BD60D3E3234659A400AB824A /* iOS8-QuakesTests */,
 				BD60D3C82346592A00AB824A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				BD60D3C72346592A00AB824A /* iOS8-Quakes.app */,
+				BD60D3E2234659A400AB824A /* iOS8-QuakesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +92,17 @@
 				BD60D3D82346592B00AB824A /* Info.plist */,
 			);
 			path = "iOS8-Quakes";
+			sourceTree = "<group>";
+		};
+		BD60D3E3234659A400AB824A /* iOS8-QuakesTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD60D3E4234659A400AB824A /* iOS8_QuakesTests.swift */,
+				BD60D3EE23465A6A00AB824A /* QuakeData.swift */,
+				BD60D3EC234659EB00AB824A /* Quake.json */,
+				BD60D3E6234659A400AB824A /* Info.plist */,
+			);
+			path = "iOS8-QuakesTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +125,24 @@
 			productReference = BD60D3C72346592A00AB824A /* iOS8-Quakes.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BD60D3E1234659A400AB824A /* iOS8-QuakesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD60D3E9234659A400AB824A /* Build configuration list for PBXNativeTarget "iOS8-QuakesTests" */;
+			buildPhases = (
+				BD60D3DE234659A400AB824A /* Sources */,
+				BD60D3DF234659A400AB824A /* Frameworks */,
+				BD60D3E0234659A400AB824A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD60D3E8234659A400AB824A /* PBXTargetDependency */,
+			);
+			name = "iOS8-QuakesTests";
+			productName = "iOS8-QuakesTests";
+			productReference = BD60D3E2234659A400AB824A /* iOS8-QuakesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +155,10 @@
 				TargetAttributes = {
 					BD60D3C62346592A00AB824A = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					BD60D3E1234659A400AB824A = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = BD60D3C62346592A00AB824A;
 					};
 				};
 			};
@@ -116,6 +176,7 @@
 			projectRoot = "";
 			targets = (
 				BD60D3C62346592A00AB824A /* iOS8-Quakes */,
+				BD60D3E1234659A400AB824A /* iOS8-QuakesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +189,14 @@
 				BD60D3D72346592B00AB824A /* LaunchScreen.storyboard in Resources */,
 				BD60D3D42346592B00AB824A /* Assets.xcassets in Resources */,
 				BD60D3D22346592A00AB824A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD60D3E0234659A400AB824A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD60D3ED234659EB00AB824A /* Quake.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +213,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD60D3DE234659A400AB824A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD60D3E5234659A400AB824A /* iOS8_QuakesTests.swift in Sources */,
+				BD60D3EF23465A6A00AB824A /* QuakeData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD60D3E8234659A400AB824A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD60D3C62346592A00AB824A /* iOS8-Quakes */;
+			targetProxy = BD60D3E7234659A400AB824A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BD60D3D02346592A00AB824A /* Main.storyboard */ = {
@@ -316,6 +402,46 @@
 			};
 			name = Release;
 		};
+		BD60D3EA234659A400AB824A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
+				INFOPLIST_FILE = "iOS8-QuakesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.iOS8-QuakesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS8-Quakes.app/iOS8-Quakes";
+			};
+			name = Debug;
+		};
+		BD60D3EB234659A400AB824A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
+				INFOPLIST_FILE = "iOS8-QuakesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.iOS8-QuakesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS8-Quakes.app/iOS8-Quakes";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +459,15 @@
 			buildConfigurations = (
 				BD60D3DC2346592B00AB824A /* Debug */,
 				BD60D3DD2346592B00AB824A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD60D3E9234659A400AB824A /* Build configuration list for PBXNativeTarget "iOS8-QuakesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD60D3EA234659A400AB824A /* Debug */,
+				BD60D3EB234659A400AB824A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
