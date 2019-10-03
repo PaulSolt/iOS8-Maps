@@ -23,8 +23,6 @@ class Quake: NSObject, Decodable {
 	private let longitude: Double
 	private let latitude: Double
 	
-	
-	
 	enum QuakeCodingKeys: String, CodingKey {
 		case mag
 		case place
@@ -60,7 +58,8 @@ class Quake: NSObject, Decodable {
 
 extension Quake: MKAnnotation {
 	var coordinate: CLLocationCoordinate2D {
-		return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+		return CLLocationCoordinate2D(latitude: latitude,
+									  longitude: longitude)
 	}
 	
 	var title: String? {
