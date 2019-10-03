@@ -32,17 +32,12 @@ import XCTest
 
 
 class Quake: NSObject, Decodable {
-	// mag
-	// place
-	// time
-	// long
-	// lat
 	
 	let mag: Double
-//	let place: String
-//	let time: Date
-//	let longitude: Double
-//	let latitude: Double
+	let place: String
+	let time: Date
+	let longitude: Double
+	let latitude: Double
 	
 	enum QuakeCodingKeys: String, CodingKey {
 		case mag
@@ -51,7 +46,7 @@ class Quake: NSObject, Decodable {
 		
 		case properties
 		case geometry
-		
+		case coordinates
 //		case long
 		
 	}
@@ -60,21 +55,24 @@ class Quake: NSObject, Decodable {
 	required init(from decoder: Decoder) throws {
 		
 		let container = try decoder.container(keyedBy: QuakeCodingKeys.self)
-		
 		let properties = try container.nestedContainer(keyedBy: QuakeCodingKeys.self, forKey: .properties)
+		let geometry = try container.nestedContainer(keyedBy: QuakeCodingKeys.self, forKey: .geometry)
+		var coordinates = try geometry.nestedUnkeyedContainer(forKey: .coordinates)
+		
+		mag = try properties.decode(Double.self, forKey: .mag)
+		place = try properties.decode(String.self, forKey: .place)
+		time = try properties.decode(Date.self, forKey: .time)
+
+		longitude = try coordinates.decode(Double.self)
+		latitude = try coordinates.decode(Double.self)
+		//		_ = try coordinates.decode(Double.self) // Ignore depth
 		
 		// TODO: may want to return nil if we cannot decode
 		// if at the end
-		
-		mag = try properties.decode(Double.self, forKey: .properties)
-		
-		
-		
+
 		super.init()
 	}
 }
-
-
 
 class iOS8_QuakesTests: XCTestCase {
 
@@ -88,16 +86,26 @@ class iOS8_QuakesTests: XCTestCase {
 
 		} catch {
 			print("Error decoding: \(error)")
+			throw error
 		}
 	}
 	
 	func testQuakeJSON() throws {
-		
+		// Arrange
 		let decoder = JSONDecoder()
+		decoder.dateDecodingStrategy = .millisecondsSince1970
+		// API stores time in milliseconds
+		let date = Date(timeIntervalSince1970: 1388620296020 / 1000)
 		
+		// Act
 		let quake = try decoder.decode(Quake.self, from: quakeData)
-		XCTAssertEqual(1.29, quake.mag, accuracy: 0.01)
 		
+		// Assert
+		XCTAssertEqual(1.29, quake.mag, accuracy: 0.001)
+		XCTAssertEqual("10km SSW of Idyllwild, CA", quake.place)
+		XCTAssertEqual(date, quake.time)
+		XCTAssertEqual(-116.7776667, quake.longitude, accuracy: 0.001)
+		XCTAssertEqual(33.663333299999998, quake.latitude, accuracy: 0.001)
 	}
 	
 
