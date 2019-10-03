@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD467F5F2346729C00C3BDD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD467F5E2346729C00C3BDD6 /* Main.storyboard */; };
+		BD467F61234672D900C3BDD6 /* EarthquakesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD467F60234672D900C3BDD6 /* EarthquakesViewController.swift */; };
 		BD60D3CB2346592A00AB824A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60D3CA2346592A00AB824A /* AppDelegate.swift */; };
 		BD60D3CD2346592A00AB824A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60D3CC2346592A00AB824A /* SceneDelegate.swift */; };
-		BD60D3CF2346592A00AB824A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60D3CE2346592A00AB824A /* ViewController.swift */; };
-		BD60D3D22346592A00AB824A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD60D3D02346592A00AB824A /* Main.storyboard */; };
 		BD60D3D42346592B00AB824A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD60D3D32346592B00AB824A /* Assets.xcassets */; };
 		BD60D3D72346592B00AB824A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD60D3D52346592B00AB824A /* LaunchScreen.storyboard */; };
 		BD60D3E5234659A400AB824A /* iOS8_QuakesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60D3E4234659A400AB824A /* iOS8_QuakesTests.swift */; };
@@ -31,11 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD467F5E2346729C00C3BDD6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BD467F60234672D900C3BDD6 /* EarthquakesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesViewController.swift; sourceTree = "<group>"; };
 		BD60D3C72346592A00AB824A /* iOS8-Quakes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS8-Quakes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD60D3CA2346592A00AB824A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD60D3CC2346592A00AB824A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD60D3CE2346592A00AB824A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BD60D3D12346592A00AB824A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD60D3D32346592B00AB824A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD60D3D62346592B00AB824A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD60D3D82346592B00AB824A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,10 +89,10 @@
 			children = (
 				BD60D3CA2346592A00AB824A /* AppDelegate.swift */,
 				BD60D3CC2346592A00AB824A /* SceneDelegate.swift */,
-				BD60D3CE2346592A00AB824A /* ViewController.swift */,
+				BD467F60234672D900C3BDD6 /* EarthquakesViewController.swift */,
 				BD60D3F023466AA400AB824A /* Quake.swift */,
 				BD60D3F223466BB300AB824A /* QuakeFetcher.swift */,
-				BD60D3D02346592A00AB824A /* Main.storyboard */,
+				BD467F5E2346729C00C3BDD6 /* Main.storyboard */,
 				BD60D3D32346592B00AB824A /* Assets.xcassets */,
 				BD60D3D52346592B00AB824A /* LaunchScreen.storyboard */,
 				BD60D3D82346592B00AB824A /* Info.plist */,
@@ -192,9 +192,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD467F5F2346729C00C3BDD6 /* Main.storyboard in Resources */,
 				BD60D3D72346592B00AB824A /* LaunchScreen.storyboard in Resources */,
 				BD60D3D42346592B00AB824A /* Assets.xcassets in Resources */,
-				BD60D3D22346592A00AB824A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD60D3F323466BB300AB824A /* QuakeFetcher.swift in Sources */,
-				BD60D3CF2346592A00AB824A /* ViewController.swift in Sources */,
+				BD467F61234672D900C3BDD6 /* EarthquakesViewController.swift in Sources */,
 				BD60D3F123466AA400AB824A /* Quake.swift in Sources */,
 				BD60D3CB2346592A00AB824A /* AppDelegate.swift in Sources */,
 				BD60D3CD2346592A00AB824A /* SceneDelegate.swift in Sources */,
@@ -241,14 +241,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BD60D3D02346592A00AB824A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD60D3D12346592A00AB824A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BD60D3D52346592B00AB824A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
