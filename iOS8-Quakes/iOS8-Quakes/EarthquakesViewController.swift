@@ -18,6 +18,8 @@ class EarthquakesViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		mapView.delegate = self
+		mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "QuakeView")
 		fetchQuakes()
 	}
 	
@@ -52,4 +54,29 @@ class EarthquakesViewController: UIViewController {
 		}
 
 	}
+}
+
+extension EarthquakesViewController: MKMapViewDelegate {
+	
+	func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+		
+		// TODO: figure out how to handle multiple annoations if required ...
+		guard let quake = annotation as? Quake else { fatalError("Invalid type"); return nil }
+		
+		guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "QuakeView") as? MKMarkerAnnotationView else { fatalError("Incorrect view is registered")
+		}
+		
+		annotationView.glyphImage = UIImage(named: "QuakeIcon")
+		
+		if quake.mag >= 5 {
+			annotationView.markerTintColor = .red
+		} else if quake.mag >= 3 && quake.mag < 5 {
+			annotationView.markerTintColor = .orange
+		} else {
+			annotationView.markerTintColor = .yellow
+		}
+		
+		return annotationView
+	}
+	
 }

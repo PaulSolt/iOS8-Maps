@@ -63,10 +63,10 @@ extension Quake: MKAnnotation {
 	}
 	
 	var title: String? {
-		"Hey there!"
+		place
 	}
 	
 	var subtitle: String? {
-		"I'm the subtitle"
+		"Magnitude: \(mag)"
 	}
 }
