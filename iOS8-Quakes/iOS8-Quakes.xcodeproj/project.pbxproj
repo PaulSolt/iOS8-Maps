@@ -16,6 +16,8 @@
 		BD60D3E5234659A400AB824A /* iOS8_QuakesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60D3E4234659A400AB824A /* iOS8_QuakesTests.swift */; };
 		BD60D3ED234659EB00AB824A /* Quake.json in Resources */ = {isa = PBXBuildFile; fileRef = BD60D3EC234659EB00AB824A /* Quake.json */; };
 		BD60D3EF23465A6A00AB824A /* QuakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60D3EE23465A6A00AB824A /* QuakeData.swift */; };
+		BD60D3F123466AA400AB824A /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60D3F023466AA400AB824A /* Quake.swift */; };
+		BD60D3F323466BB300AB824A /* QuakeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60D3F223466BB300AB824A /* QuakeFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		BD60D3E6234659A400AB824A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD60D3EC234659EB00AB824A /* Quake.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Quake.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		BD60D3EE23465A6A00AB824A /* QuakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeData.swift; sourceTree = "<group>"; };
+		BD60D3F023466AA400AB824A /* Quake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
+		BD60D3F223466BB300AB824A /* QuakeFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				BD60D3CA2346592A00AB824A /* AppDelegate.swift */,
 				BD60D3CC2346592A00AB824A /* SceneDelegate.swift */,
 				BD60D3CE2346592A00AB824A /* ViewController.swift */,
+				BD60D3F023466AA400AB824A /* Quake.swift */,
+				BD60D3F223466BB300AB824A /* QuakeFetcher.swift */,
 				BD60D3D02346592A00AB824A /* Main.storyboard */,
 				BD60D3D32346592B00AB824A /* Assets.xcassets */,
 				BD60D3D52346592B00AB824A /* LaunchScreen.storyboard */,
@@ -207,7 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD60D3F323466BB300AB824A /* QuakeFetcher.swift in Sources */,
 				BD60D3CF2346592A00AB824A /* ViewController.swift in Sources */,
+				BD60D3F123466AA400AB824A /* Quake.swift in Sources */,
 				BD60D3CB2346592A00AB824A /* AppDelegate.swift in Sources */,
 				BD60D3CD2346592A00AB824A /* SceneDelegate.swift in Sources */,
 			);
